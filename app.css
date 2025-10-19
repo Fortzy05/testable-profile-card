@@ -128,30 +128,60 @@ h3 {
 }
 
 /* Social Links */
-.social-links {
+/* social list container */
+.social-links ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    margin-top: 20px;
-    list-style: none;
+    gap: 18px;
     padding: 0;
-}
-
-.social-links li {
+    margin: 0;
     list-style: none;
 }
 
-.social-links a svg {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+/* list item */
+.social-links li {
+    display: block;
+    /* each item is a block wrapper */
 }
 
-.social-links a:hover svg {
-    transform: scale(1.1);
-    opacity: 0.85;
+/* anchor: align icon + label horizontally */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* spacing between svg and label */
+    text-decoration: none;
+    color: inherit;
+    padding: 6px 8px;
+    /* makes clickable area bigger */
+    border-radius: 8px;
+    transition: background 0.18s ease, transform 0.18s ease;
 }
+
+/* keep SVG simple (your SVG colors remain) */
+.social-links a svg {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+
+/* label styling */
+.social-links .social-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e3a8a;
+    /* your masculine accent */
+}
+
+/* hover effect (subtle) */
+.social-links a:hover {
+    background: rgba(30, 58, 138, 0.06);
+    transform: translateY(-2px);
+}
+
+/* smaller on mobile */
+
 
 /* Responsive */
 @media (max-width: 480px) {
@@ -175,4 +205,12 @@ h3 {
         width: 34px;
         height: 34px;
     }
+        .social-links a svg {
+            width: 24px;
+            height: 24px;
+        }
+    
+        .social-links .social-label {
+            font-size: 13px;
+        }
 }
