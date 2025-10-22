@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./contact.css" />
+  <script src="./contact.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contact-form" novalidate>
+      <div class="success" id="success-message" data-testid="test-contact-success" hidden>
+        Your message has been sent successfully!
+      </div>
+
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" data-testid="test-contact-name" aria-describedby="error-full-name" required />
+      <div class="error" id="error-full-name" data-testid="test-contact-error-name"></div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" data-testid="test-contact-email" aria-describedby="error-email" required />
+      <div class="error" id="error-email" data-testid="test-contact-error-email"></div>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" data-testid="test-contact-subject" aria-describedby="error-subject" required />
+      <div class="error" id="error-subject" data-testid="test-contact-error-subject"></div>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+      <div class="error" id="error-message" data-testid="test-contact-error-message"></div>
+
+      <button type="submit" data-testid="test-contact-submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>

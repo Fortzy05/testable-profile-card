@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Imbue:wght@100..900&family=Poppins:wght@300;400;600&display=swap');
+/* ===========================
+   Fonts & Reset
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -8,209 +11,201 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f2f5f9, #dce3ec);
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    color: #1f2937;
+    gap: 40px;
+    list-style: none;
+    margin-bottom: 40px;
 }
 
-/* Main Container */
-.container {
-    background: #ffffff;
-    max-width: 430px;
-    width: 100%;
-    padding: 32px 28px;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.container:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
-}
-
-/* Profile Image */
-.profile-image {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 4px solid #1e3a8a;
-    object-fit: cover;
-    margin-bottom: 18px;
-    transition: transform 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-}
-
-/* Name */
-.profile-name {
-    font-size: 22px;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 4px;
-}
-
-/* Job Title */
-.job-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: #1e3a8a;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Bio */
-.shortBio {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #374151;
-    margin-top: 8px;
-    margin-bottom: 15px;
-    padding: 0 4px;
-}
-
-/* Info (date, time, location) */
-.info {
-    font-size: 13.5px;
-    font-weight: 500;
-    color: #334155;
-    background: #f3f4f6;
-    border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 14px;
-}
-
-/* Email */
-p a {
-    color: #0d9488;
-    font-weight: 500;
+.nav-links a {
     text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
-p a:hover {
-    text-decoration: underline;
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #1e3a8a;
+    color: #ffffff;
 }
 
-/* Lists: Hobbies & Dislikes */
-ul {
-    list-style: disc inside;
-    text-align: left;
-    margin: 10px 0 16px 0;
-    padding: 0 10px;
+/* ===========================
+   Container & Article
+=========================== */
+.container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-ul li {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #374151;
+.profile-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===========================
+   Avatar
+=========================== */
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Header Text
+=========================== */
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
     margin-bottom: 6px;
 }
 
-/* Section Headings */
-h2,
-h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e3a8a;
+header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #4b5563;
     text-transform: uppercase;
-    margin: 16px 0 8px 0;
-    letter-spacing: 0.3px;
-    text-align: center;
+    letter-spacing: 1px;
 }
 
-/* Social Links */
-/* social list container */
+/* ===========================
+   Sections (Bio, Details, Hobbies, Dislikes)
+=========================== */
+section {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+section h3 {
+    font-size: 18px;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.shortBio {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.details p,
+.list-section li {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+ul {
+    list-style: disc inside;
+    padding-left: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* ===========================
+   Social Links
+=========================== */
 .social-links ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 18px;
-    padding: 0;
-    margin: 0;
+    gap: 24px;
     list-style: none;
+    margin-top: 12px;
 }
 
-/* list item */
-.social-links li {
-    display: block;
-    /* each item is a block wrapper */
-}
-
-/* anchor: align icon + label horizontally */
 .social-links a {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    /* spacing between svg and label */
-    text-decoration: none;
-    color: inherit;
-    padding: 6px 8px;
-    /* makes clickable area bigger */
+    gap: 6px;
+    padding: 8px 16px;
     border-radius: 8px;
-    transition: background 0.18s ease, transform 0.18s ease;
-}
-
-/* keep SVG simple (your SVG colors remain) */
-.social-links a svg {
-    width: 28px;
-    height: 28px;
-    display: block;
-}
-
-/* label styling */
-.social-links .social-label {
-    font-size: 14px;
-    font-weight: 600;
+    text-decoration: none;
     color: #1e3a8a;
-    /* your masculine accent */
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
-/* hover effect (subtle) */
-.social-links a:hover {
-    background: rgba(30, 58, 138, 0.06);
-    transform: translateY(-2px);
+.social-links a:hover,
+.social-links a:focus {
+    background-color: rgba(30, 58, 138, 0.1);
 }
 
-/* smaller on mobile */
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 1024px) {
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
 
+    header h1 {
+        font-size: 28px;
+    }
 
-/* Responsive */
-@media (max-width: 480px) {
+    header h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
     .container {
-        padding: 24px;
+        padding: 0 16px;
     }
 
-    .profile-name {
-        font-size: 20px;
+    ul {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
     }
 
-    .shortBio {
-        font-size: 13.5px;
+    header h1 {
+        font-size: 24px;
     }
 
-    ul li {
-        font-size: 13.5px;
+    header h2 {
+        font-size: 16px;
     }
 
-    .social-links a svg {
-        width: 34px;
-        height: 34px;
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
     }
-        .social-links a svg {
-            width: 24px;
-            height: 24px;
-        }
-    
-        .social-links .social-label {
-            font-size: 13px;
-        }
 }

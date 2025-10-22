@@ -1,0 +1,127 @@
+/* ===========================
+   Fonts & Reset
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+main[data-testid="test-about-page"] {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ===========================
+   Sections (No Card)
+=========================== */
+section {
+    width: 100%;
+}
+
+section h3 {
+    font-size: 20px;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+section p {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* Optional extra spacing for lists */
+section ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+section ul li {
+    margin-bottom: 6px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 1024px) {
+    main[data-testid="test-about-page"] {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    section h3 {
+        font-size: 18px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    section h3 {
+        font-size: 16px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+}

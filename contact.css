@@ -1,0 +1,156 @@
+/* ===========================
+   Fonts & Reset
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color: #1e3a8a;
+    color: #ffffff;
+}
+
+/* ===========================
+   Form Container
+=========================== */
+main {
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #1e3a8a;
+    border-color: #1e3a8a;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    background-color: #0d2b66;
+    transform: translateY(-1px);
+}
+
+/* ===========================
+   Error & Success Messages
+=========================== */
+.error {
+    color: #d93025;
+    font-size: 0.9rem;
+}
+
+.success {
+    color: #0f9d58;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 1024px) {
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 16px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 12px;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
