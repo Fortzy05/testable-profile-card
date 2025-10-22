@@ -200,9 +200,7 @@ ul {
         margin-bottom: 30px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
+
 }
 
 @media (max-width: 480px) {
