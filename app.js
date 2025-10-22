@@ -3,6 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentDayElem = document.getElementById("currentDay");
   const deploymentDateElem = document.querySelector("time");
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      const expanded =
+        hamburger.getAttribute("aria-expanded") === "true" || false;
+      hamburger.setAttribute("aria-expanded", !expanded);
+      navLinks.classList.toggle("active");
+
+      // Animate hamburger into X
+      hamburger.classList.toggle("open");
+    });
+  });
+
   function updateTime() {
     const now = new Date();
 

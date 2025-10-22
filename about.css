@@ -26,10 +26,18 @@ body {
 =========================== */
 .nav-links {
     display: flex;
+    /* always flex row */
+    flex-direction: row;
+    /* ensure horizontal layout */
     justify-content: center;
+    /* center links */
+    align-items: center;
     gap: 40px;
     list-style: none;
+    /* remove bullets */
     margin-bottom: 40px;
+    padding-left: 0;
+    /* remove default UL padding */
 }
 
 .nav-links a {
@@ -108,6 +116,13 @@ section ul li {
     section p {
         font-size: 14px;
     }
+
+    .nav-links {
+        flex-direction: row;
+        /* maintain horizontal on tablet */
+        gap: 20px;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -120,8 +135,9 @@ section ul li {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
+        /* maintain horizontal on mobile */
         gap: 12px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
